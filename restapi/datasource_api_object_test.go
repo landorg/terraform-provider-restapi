@@ -105,6 +105,7 @@ func TestAccRestapiobject_Basic(t *testing.T) {
 					resource.TestCheckResourceAttr("data.restapi_object.Foo", "id", "1234"),
 					resource.TestCheckResourceAttr("data.restapi_object.Foo", "api_data.first", "Foo"),
 					resource.TestCheckResourceAttr("data.restapi_object.Foo", "api_data.last", "Bar"),
+					resource.TestCheckResourceAttr("data.restapi_object.Foo", "api_response", "{\"data\":{\"identifier\":\"FooBar\"},\"first\":\"Foo\",\"id\":\"1234\",\"last\":\"Bar\"}"),
 				),
 				// PreventDiskCleanup: true,
 			},
